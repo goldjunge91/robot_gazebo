@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robot_gazebo</name>
+  <version>0.16.2</version>
+  <description>Gazebo simulation for ROSbot Series</description>
+  <license>Apache License 2.0</license>
+
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">gz_ros2_control</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">ROBOT_gz_worlds</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">laser_filters</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">launch</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">launch_ros</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">nav2_common</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">ros_gz_bridge</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">ros_gz_sim</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">robot_controller</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">robot_localization</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">robot_utils</exec_depend>
+  <exec_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">rviz2</exec_depend>
+
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">geometry_msgs</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">launch</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">launch_pytest</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">launch_ros</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">nav_msgs</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">python3-pytest</test_depend>
+  <test_depend condition="$ROBOT_ROS_BUILD_TYPE == simulation">tf_transformations</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
